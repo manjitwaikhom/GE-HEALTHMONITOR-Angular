@@ -11,7 +11,7 @@
   border: 1px solid #b1afae;
   padding: 40px;
   border-radius: 7px;
-  -webkit-box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
-  box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -4px 2px 18px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -4px 2px 18px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: -4px 2px 18px -6px rgba(0, 0, 0, 0.75);
 }

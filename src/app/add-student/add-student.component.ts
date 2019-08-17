@@ -23,13 +23,15 @@ export class AddStudentComponent implements OnInit {
       Validators.minLength(5)
     ]),
     student_email: new FormControl("", [Validators.required, Validators.email]),
-    student_branch: new FormControl()
+    student_branch: new FormControl(),
+    student_dob: new FormControl()
   });
 
   saveStudent(saveStudent) {
     this.student = new Student();
     this.student.patient_name = this.StudentName.value;
     this.student.patient_email = this.StudentEmail.value;
+    this.student.patient_dob = this.StudentDob.value;
     this.student.patient_gender = this.StudentBranch.value;
     this.submitted = true;
     this.save();
@@ -48,6 +50,10 @@ export class AddStudentComponent implements OnInit {
 
   get StudentEmail() {
     return this.studentsaveform.get("student_email");
+  }
+
+  get StudentDob() {
+    return this.studentsaveform.get("student_dob");
   }
 
   get StudentBranch() {

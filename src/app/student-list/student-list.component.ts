@@ -63,7 +63,8 @@ export class StudentListComponent implements OnInit {
     student_id: new FormControl(),
     student_name: new FormControl(),
     student_email: new FormControl(),
-    student_branch: new FormControl()
+    student_branch: new FormControl(),
+    student_dob: new FormControl()
   });
 
   updateStu(updstu) {
@@ -72,6 +73,7 @@ export class StudentListComponent implements OnInit {
     this.student.patient_name = this.StudentName.value;
     this.student.patient_email = this.StudentEmail.value;
     this.student.patient_gender = this.StudentBranch.value;
+    this.student.patient_dob = this.StudentDob.value;
     console.log(this.StudentBranch.value);
 
     this.studentservice
@@ -101,6 +103,10 @@ export class StudentListComponent implements OnInit {
 
   get StudentId() {
     return this.studentupdateform.get("student_id");
+  }
+
+  get StudentDob() {
+    return this.studentupdateform.get("student_dob");
   }
 
   changeisUpdate() {
