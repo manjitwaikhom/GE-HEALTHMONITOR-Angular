@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+.ge-logo-bar {
+  background-image: url("/assets/gelogo2.png");
+  background-repeat: no-repeat;
+  height: 85px;
+}
+.text-colour {
+  color: #b1afae;
+}
+.border-style {
+  border: 1px solid #b1afae;
+  padding: 40px;
+  border-radius: 7px;
+  -webkit-box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
+  box-shadow: 7px 11px 17px -14px rgba(0, 0, 0, 0.75);
+}
