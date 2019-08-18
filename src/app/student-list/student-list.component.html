@@ -42,18 +42,18 @@
           <td>{{ student.patient_dob }}</td>
           <td>
             <button
-              (click)="deleteStudent(student.patient_id)"
-              class="btn btn-primary"
-            >
-              <i class="fa fa-futboll-0">Delete</i></button
-            >&nbsp;
-            <button
               (click)="updateStudent(student.patient_id)"
               class="btn btn-info"
               data-toggle="modal"
               data-target="#myModal"
             >
-              Update
+              Update</button
+            >&nbsp;
+            <button
+              (click)="deleteStudent(student.patient_id)"
+              class="btn btn-danger	"
+            >
+              <i class="fa fa-futboll-0">Delete</i>
             </button>
           </td>
         </tr>
