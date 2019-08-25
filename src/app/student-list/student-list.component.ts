@@ -25,6 +25,10 @@ export class StudentListComponent implements OnInit {
   studentlist: any;
   isupdated = false;
 
+  heartRate: string = "80 bpm";
+  bloodPressure: string = "120/80 mmHg";
+  sugarLevel: string = "140 mg/dL";
+
   ngOnInit() {
     this.isupdated = false;
     this.dtOptions = {
