@@ -13,6 +13,8 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
 export class StudentListComponent implements OnInit {
   constructor(private studentservice: StudentService) {}
 
+  selectedPatient: Student = new Student();
+
   studentsArray: any[] = [];
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
@@ -54,6 +56,15 @@ export class StudentListComponent implements OnInit {
     this.studentservice.getStudent(id).subscribe(
       data => {
         this.studentlist = data;
+      },
+      error => console.log(error)
+    );
+  }
+
+  public openLiveData(id: number) {
+    this.studentservice.getStudent(id).subscribe(
+      data => {
+        this.selectedPatient = data[0];
       },
       error => console.log(error)
     );

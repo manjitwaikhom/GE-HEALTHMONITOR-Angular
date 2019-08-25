@@ -17,6 +17,45 @@
   </div>
 
   <div class="panel-body">
+    <div class="modal modal-dialog" id="myModal2">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title text-colour" style="text-align: center">
+            Patient Live Data
+          </h4>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body" *ngIf="selectedPatient">
+          <table class="flat">
+            <tr>
+              <td>ID:{{ selectedPatient.patient_id }}</td>
+              <td>Name: {{ selectedPatient.patient_name }}</td>
+              <td>Gender: {{ selectedPatient.patient_gender }}</td>
+              <td>DOB: {{ selectedPatient.patient_dob }}</td>
+            </tr>
+          </table>
+
+          <table>
+            <tr>
+              <td>
+                <h2>Heart Beat:{{ selectedPatient.patient_id }}</h2>
+              </td>
+              <td>
+                <h2>Sugar Level: {{ selectedPatient.patient_name }}</h2>
+              </td>
+              <td>
+                <h2>BP: {{ selectedPatient.patient_gender }}</h2>
+              </td>
+            </tr>
+          </table>
+
+          <button type="button" class="btn btn-danger" data-dismiss="modal">
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
     <table
       class="table table-hover table-sm"
       datatable
@@ -53,7 +92,15 @@
               (click)="deleteStudent(student.patient_id)"
               class="btn btn-danger	"
             >
-              <i class="fa fa-futboll-0">Delete</i>
+              <i class="fa fa-futboll-0">Delete</i></button
+            >&nbsp;
+            <button
+              (click)="openLiveData(student.patient_id)"
+              class="btn btn-info"
+              data-toggle="modal"
+              data-target="#myModal2"
+            >
+              Real Time Data
             </button>
           </td>
         </tr>
@@ -159,3 +206,5 @@
     </div>
   </div>
 </div>
+
+<!-- modal for live data modal for live data modal for live data modal for live data -->
