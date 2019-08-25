@@ -22,14 +22,14 @@
         <!-- Modal Header -->
         <div class="modal-header">
           <h4 class="modal-title text-colour" style="text-align: center">
-            Patient Live Data
+            {{ selectedPatient.patient_name }}'s Real Time Vitals
           </h4>
         </div>
         <!-- Modal body -->
         <div class="modal-body" *ngIf="selectedPatient">
           <table class="flat">
             <tr>
-              <td>ID:{{ selectedPatient.patient_id }}</td>
+              <td>ID: {{ selectedPatient.patient_id }}</td>
               <td>Name: {{ selectedPatient.patient_name }}</td>
               <td>Gender: {{ selectedPatient.patient_gender }}</td>
               <td>DOB: {{ selectedPatient.patient_dob }}</td>
@@ -39,13 +39,15 @@
           <table>
             <tr>
               <td>
-                <h2>Heart Beat:{{ selectedPatient.patient_id }}</h2>
+                <h4><span class="vitals">Heart Rate: </span>{{ "80 bpm" }}</h4>
               </td>
               <td>
-                <h2>Sugar Level: {{ selectedPatient.patient_name }}</h2>
+                <h4>
+                  <span class="vitals">Sugar Level: </span>{{ "140 mg/dL" }}
+                </h4>
               </td>
               <td>
-                <h2>BP: {{ selectedPatient.patient_gender }}</h2>
+                <h4><span class="vitals">BP: </span>{{ "120/80 mmHg" }}</h4>
               </td>
             </tr>
           </table>
