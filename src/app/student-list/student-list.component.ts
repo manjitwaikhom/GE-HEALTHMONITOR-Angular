@@ -69,6 +69,7 @@ export class StudentListComponent implements OnInit {
     this.studentservice.getStudent(id).subscribe(
       data => {
         this.selectedPatient = data[0];
+        //console.log(data[0]);
       },
       error => console.log(error)
     );

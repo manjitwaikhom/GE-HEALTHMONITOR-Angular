@@ -39,15 +39,40 @@
           <table>
             <tr>
               <td>
-                <h4><span class="vitals">Heart Rate: </span>{{ heartRate }}</h4>
+                <h4><span class="vitals">Heart Rate: </span></h4>
+              </td>
+              <td>
+                <h4>{{ heartRate }}</h4>
+              </td>
+              <td>
+                <h4><span class="vitals">Normal Range: </span> 60 - 100 bpm</h4>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <h4><span class="vitals">Sugar Level: </span></h4>
               </td>
               <td>
                 <h4>
-                  <span class="vitals">Sugar Level: </span>{{ sugarLevel }}
+                  {{ sugarLevel }}
                 </h4>
               </td>
               <td>
-                <h4><span class="vitals">BP: </span>{{ bloodPressure }}</h4>
+                <h4>
+                  <span class="vitals">Normal Range: </span> 72 - 140 mg/dL
+                </h4>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <h4><span class="vitals">BP: </span></h4>
+              </td>
+              <td>
+                <h4>{{ bloodPressure }}</h4>
+              </td>
+              <td>
+                <h4><span class="vitals">Ideal measure:</span> 120/80 mmHg</h4>
               </td>
             </tr>
           </table>
